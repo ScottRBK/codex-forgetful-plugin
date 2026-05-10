@@ -4,8 +4,6 @@
 
 Codex-specific plugin packaging for [Forgetful](https://github.com/ScottRBK/forgetful)-powered context gathering.
 
-This repo is separate from the Claude Code plugin repo so Codex-specific plugin structure, marketplace metadata, and setup commands can evolve independently.
-
 ## Install
 
 From a clone of this repository:
