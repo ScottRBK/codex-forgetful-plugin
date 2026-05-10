@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'import json,sys; d=json.load(sys.stdin); last=d.get(\"last_assistant_message\") or \"\"; markers=(\"Forgetful memory curation:\", \"No durable memory to save.\", \"Saved to memory:\"); prompt=\"Run $memory-curate for this completed turn. Only persist durable reusable knowledge with importance >= 7. Query Forgetful for duplicates before writing. Prefer updating, linking, or marking obsolete over duplicate creation. If nothing qualifies, reply exactly: Forgetful memory curation: No durable memory to save.\"; out={\"continue\": False, \"stopReason\": \"Forgetful memory curation already ran for this stop\"} if d.get(\"stop_hook_active\") else ({\"continue\": False, \"stopReason\": \"Forgetful memory curation already handled\"} if any(m in last for m in markers) else {\"decision\": \"block\", \"reason\": prompt}); print(json.dumps(out))'",
+            "timeout": 5,
+            "statusMessage": "Checking Forgetful memory curation"
+          }
+        ]
+      }
+    ]
+  }
+}

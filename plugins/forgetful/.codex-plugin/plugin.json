@@ -1,6 +1,6 @@
 {
   "name": "forgetful",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Gather implementation context from Forgetful memory, local code, Context7 docs, and web fallback before coding.",
   "author": {
     "name": "Scott Raisbeck",
@@ -15,15 +15,17 @@
     "coding-workflow"
   ],
   "skills": "./skills/",
+  "hooks": "./hooks.json",
   "interface": {
     "displayName": "Forgetful",
-    "shortDescription": "Prepare focused implementation briefs with Forgetful memory before coding",
-    "longDescription": "Use Forgetful to isolate noisy retrieval work in subagents, search Forgetful memory across projects, inspect local code patterns, query Context7 for framework guidance, and return a concise implementation brief before planning or editing.",
+    "shortDescription": "Prepare implementation briefs and curate durable memory with Forgetful",
+    "longDescription": "Use Forgetful to isolate noisy retrieval work in subagents, search Forgetful memory across projects, inspect local code patterns, query Context7 for framework guidance, return concise implementation briefs before planning or editing, and optionally run Stop-hook memory curation for durable knowledge.",
     "developerName": "Scott Raisbeck",
     "category": "Coding",
     "capabilities": [
       "Interactive",
-      "Read"
+      "Read",
+      "Hooks"
     ],
     "defaultPrompt": [
       "Gather context before implementing this change",
