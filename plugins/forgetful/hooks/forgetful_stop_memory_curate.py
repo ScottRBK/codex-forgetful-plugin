@@ -9,6 +9,7 @@ to run the memory-curate skill in a continuation turn.
 from __future__ import annotations
 
 import json
+import subprocess
 import sys
 
 
@@ -19,7 +20,9 @@ SKIP_MARKERS = (
 )
 
 CURATION_PROMPT = (
-    "Run $memory-curate for this completed turn. Only persist durable reusable "
+    "Run $memory-curate for this completed turn. Files changed in the repo, so "
+    "check whether any durable decisions, project knowledge, preferences, or "
+    "implementation patterns should be saved. Only persist durable reusable "
     "knowledge with importance >= 7. Query Forgetful for duplicates before "
     "writing. Prefer updating, linking, or marking obsolete over duplicate "
     "creation. If nothing qualifies, reply exactly: Forgetful memory curation: "
@@ -48,6 +51,24 @@ def main() -> int:
                 {
                     "continue": False,
                     "stopReason": "Forgetful memory curation already handled",
+                }
+            )
+        )
+        return 0
+
+    status = subprocess.run(
+        ["git", "status", "--porcelain"],
+        text=True,
+        capture_output=True,
+        timeout=2,
+    )
+
+    if status.returncode != 0 or not status.stdout.strip():
+        print(
+            json.dumps(
+                {
+                    "continue": False,
+                    "stopReason": "No git working tree changes detected for Forgetful memory curation",
                 }
             )
         )

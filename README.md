@@ -42,16 +42,14 @@ plugins/forgetful/
 - Delegates retrieval to a subagent by default so noisy memory and code search does not consume the main agent context.
 - Queries Forgetful via the meta-tools pattern.
 - Uses local code inspection and Context7 where relevant.
-- Includes an optional Stop hook that asks Codex to run `$memory-curate` for durable knowledge after a turn.
+- Includes an optional Stop hook that asks Codex to run `$memory-curate` only when the current git working tree has changes.
 
 ## Setup Notes
 
 The plugin does not bundle `.mcp.json` by default. Forgetful MCP setup is user-specific: stdio, `uvx`, local HTTP, remote HTTP, authenticated HTTP, and custom commands are all plausible. Use `$forgetful-install` to check or configure Codex MCP entries for Forgetful and optional Context7.
 
-Stop-hook memory curation requires Codex plugin hooks to be enabled:
+Stop-hook memory curation is optional and requires Codex plugin hooks to be enabled. See the official [Codex hooks documentation](https://developers.openai.com/codex/hooks) for current setup instructions.
 
-```bash
-codex features enable plugin_hooks
-```
+Restart Codex after enabling hooks or reinstalling the plugin.
 
-Restart Codex after enabling the feature or reinstalling the plugin.
+The Stop hook is deterministic. It skips when curation already ran, when the current directory is not a git repository, or when `git status --porcelain` reports no working-tree changes. When files have changed, it asks Codex to continue with `$memory-curate`, which performs the actual Forgetful duplicate checks and memory writes.
