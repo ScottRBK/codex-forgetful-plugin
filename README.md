@@ -29,7 +29,9 @@ plugins/forgetful/
   .codex-plugin/plugin.json
   agents/
   skills/context-gather/
+  skills/encode-repo/
   skills/forgetful-project-init/
+  skills/forgetful-project-load/
   skills/forgetful-install/
   skills/memory-curate/
 ```
@@ -37,7 +39,9 @@ plugins/forgetful/
 ## What It Does
 
 - Uses `$context-gather` as the core workflow.
-- Uses `$forgetful-project-init` to manually load project-scoped memory context when needed.
+- Uses `$encode-repo` to bootstrap a repository into Forgetful projects, memories, entities, relationships, documents, and code artifacts.
+- Uses `$forgetful-project-init` to create or register Forgetful project context when needed.
+- Uses `$forgetful-project-load` to manually load recent project-scoped memory context when needed.
 - Uses `$forgetful-install` to configure user-specific MCP dependencies.
 - Delegates retrieval to a subagent by default so noisy memory and code search does not consume the main agent context.
 - Queries Forgetful via the meta-tools pattern.
@@ -47,6 +51,6 @@ plugins/forgetful/
 
 The plugin does not bundle `.mcp.json` by default. Forgetful MCP setup is user-specific: stdio, `uvx`, local HTTP, remote HTTP, authenticated HTTP, and custom commands are all plausible. Use `$forgetful-install` to check or configure Codex MCP entries for Forgetful and optional Context7.
 
-The `$forgetful-project-init` skill is available for manual use. It checks whether the current working directory matches an existing Forgetful project, fetches recent project memories when one exists, and asks before creating a new project when no match is found. It also explains how to maintain a generic device/location memory using runtime-discovered information.
+The `$forgetful-project-init` skill is available for manual project setup. It checks whether the current working directory matches an existing Forgetful project and asks before creating a new project when no match is found. The `$forgetful-project-load` skill handles recent project memory retrieval.
 
 Use `$memory-curate` manually when a turn produced durable decisions, implementation patterns, preferences, or project knowledge that should be saved.

@@ -1,7 +1,7 @@
 {
   "name": "forgetful",
-  "version": "0.1.2",
-  "description": "Gather implementation context from Forgetful memory, local code, Context7 docs, and web fallback before coding.",
+  "version": "0.1.4",
+  "description": "Gather implementation context, initialize projects, load recent project memory, and encode repositories into Forgetful memory from Codex.",
   "author": {
     "name": "Scott Raisbeck",
     "url": "https://github.com/ScottRBK"
@@ -17,8 +17,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Forgetful",
-    "shortDescription": "Prepare implementation briefs and curate durable memory with Forgetful",
-    "longDescription": "Use Forgetful to isolate noisy retrieval work in subagents, search Forgetful memory across projects, inspect local code patterns, query Context7 for framework guidance, return concise implementation briefs before planning or editing, and manually curate durable knowledge when useful.",
+    "shortDescription": "Prepare briefs, initialize projects, and load durable memory",
+    "longDescription": "Use Forgetful to isolate noisy retrieval work in subagents, search Forgetful memory across projects, inspect local code patterns, query Context7 for framework guidance, return concise implementation briefs before planning or editing, initialize project records, load recent project memory, encode repositories into structured Forgetful knowledge, and manually curate durable knowledge when useful.",
     "developerName": "Scott Raisbeck",
     "category": "Coding",
     "capabilities": [
@@ -28,7 +28,9 @@
     "defaultPrompt": [
       "Gather context before implementing this change",
       "Prepare an implementation brief for this task",
+      "Encode this repository into Forgetful memory",
       "Initialize Forgetful project context for this session",
+      "Load recent Forgetful project context for this session",
       "Use forgetful-install to configure Forgetful for Codex"
     ],
     "brandColor": "#2563EB",

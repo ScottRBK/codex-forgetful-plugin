@@ -1,13 +1,13 @@
 ---
 name: forgetful-project-init
-description: Initialize Forgetful project context for the current Codex session by matching the current working directory to a Forgetful project, loading recent project memories, and asking before creating a missing project.
+description: Create or initialize Forgetful project records for the current repository by matching the current working directory to an existing Forgetful project, asking before creating a missing project, and maintaining generic device/location metadata. Use when Scottesh asks to initialize, create, register, or set up Forgetful project context.
 ---
 
 # Forgetful Project Init
 
-Use this skill when a session starts in a repository or when the user wants to initialize Forgetful project context.
+Use this skill when the user wants to create, register, or initialize a Forgetful project for the current repository.
 
-Keep this workflow quiet. Do the checks, then report only the useful result.
+This skill is for project existence and setup only. Do not fetch recent memories as part of this workflow; use `$forgetful-project-load` when the user wants recent project context.
 
 ## Workflow
 
@@ -19,17 +19,7 @@ execute_forgetful_tool("list_projects", {})
 ```
 
 3. Match the current directory to a Forgetful project. Prefer repository metadata from the git remote when available, then project name or project notes. Do not guess a project ID.
-4. If a project matches, load recent project memories:
-
-```text
-execute_forgetful_tool("get_recent_memories", {
-  "limit": 10,
-  "project_ids": [PROJECT_ID]
-})
-```
-
-Briefly mention the matched project and the relevant memory context found. If there are no memories, say that directly.
-
+4. If a project matches, briefly mention the matched project and ID. Do not load memories.
 5. If no project matches, ask the user whether they want to create a Forgetful project for this directory. Do not create it without confirmation.
 6. When a project exists or the user confirms creation, maintain a device/location note:
    - Discover the current device from runtime context, such as hostname or environment details available in the session.

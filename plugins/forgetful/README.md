@@ -2,10 +2,12 @@
 
 Forgetful packages Scottesh's context-gather workflow for Codex.
 
-The plugin focuses on four Codex skills:
+The plugin focuses on six Codex skills:
 
 - `$context-gather`: gather implementation context before planning or coding.
-- `$forgetful-project-init`: load project-scoped memory context for the current working directory.
+- `$encode-repo`: bootstrap a repository into Forgetful projects, memories, entities, relationships, documents, and code artifacts.
+- `$forgetful-project-init`: create or register project context for the current working directory.
+- `$forgetful-project-load`: load recent project-scoped memory context for the current working directory.
 - `$forgetful-install`: configure Forgetful MCP and optional Context7 MCP for the local Codex environment.
 - `$memory-curate`: save durable decisions, patterns, preferences, and project knowledge to Forgetful.
 
@@ -15,13 +17,17 @@ The plugin focuses on four Codex skills:
 - Searches Forgetful memory across all projects by default.
 - Follows linked memories, documents, code artifacts, and skills when they clarify the task.
 - Inspects local code with targeted `rg` and file reads.
+- Separates project setup from recent-memory loading.
+- Encodes repositories into structured Forgetful knowledge with mandatory phase gates.
 - Uses Context7 for library and framework guidance when relevant.
 - Uses web search only as a fallback for current authoritative context.
 
 ## Skills
 
 - `$context-gather <task>`: gather a focused implementation brief before planning or editing.
-- `$forgetful-project-init`: match the current working directory to a Forgetful project, fetch recent project memories, or ask before creating a missing project.
+- `$encode-repo [path]`: encode a repository into Forgetful with foundation memories, architecture layers, entity graph, patterns, artifacts, and optional documents.
+- `$forgetful-project-init`: match the current working directory to a Forgetful project or ask before creating a missing project.
+- `$forgetful-project-load`: match the current working directory to an existing Forgetful project and fetch recent project memories.
 - `$forgetful-install`: check and configure Codex dependencies for Forgetful and Context7.
 - `$memory-curate`: curate durable knowledge from the completed turn into Forgetful.
 

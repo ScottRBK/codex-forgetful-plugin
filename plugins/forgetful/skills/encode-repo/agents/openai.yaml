@@ -1,0 +1,6 @@
+interface:
+  display_name: "Encode Repo"
+  short_description: "Bootstrap a repository into Forgetful memory"
+  default_prompt: "Use $encode-repo to encode the current repository into Forgetful."
+policy:
+  allow_implicit_invocation: true
