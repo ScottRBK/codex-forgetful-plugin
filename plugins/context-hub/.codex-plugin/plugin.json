@@ -1,0 +1,36 @@
+{
+  "name": "context-hub",
+  "version": "0.1.0",
+  "description": "Gather implementation context from Forgetful memory, local code, Context7 docs, and web fallback before coding.",
+  "author": {
+    "name": "Scott Raisbeck",
+    "url": "https://github.com/ScottRBK"
+  },
+  "license": "MIT",
+  "keywords": [
+    "context",
+    "forgetful",
+    "memory",
+    "context7",
+    "coding-workflow"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Context Hub",
+    "shortDescription": "Prepare focused implementation briefs before coding",
+    "longDescription": "Use Context Hub to isolate noisy retrieval work in subagents, search Forgetful memory across projects, inspect local code patterns, query Context7 for framework guidance, and return a concise implementation brief before planning or editing.",
+    "developerName": "Scott Raisbeck",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "defaultPrompt": [
+      "Gather context before implementing this change",
+      "Prepare an implementation brief for this task",
+      "Install Context Hub for Codex"
+    ],
+    "brandColor": "#2563EB",
+    "screenshots": []
+  }
+}

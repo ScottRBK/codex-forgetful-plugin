@@ -1,0 +1,20 @@
+{
+  "name": "context-hub",
+  "interface": {
+    "displayName": "Context Hub"
+  },
+  "plugins": [
+    {
+      "name": "context-hub",
+      "source": {
+        "source": "local",
+        "path": "./plugins/context-hub"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Coding"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Context Gather"
+  short_description: "Gather memory, code, and docs before coding"
+  default_prompt: "Use $context-gather to prepare an implementation brief before changing the code."
+policy:
+  allow_implicit_invocation: true
