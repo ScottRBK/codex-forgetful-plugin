@@ -12,7 +12,7 @@ The point of this workflow is context isolation: retrieval is noisy, tool-heavy 
 ## Workflow
 
 1. Restate the task in one sentence.
-2. Launch a subagent for retrieval. Treat an explicit request for `context_gather`, `context-hub:context_gather`, `context-gather`, "gather context", or an implementation brief as permission to delegate this retrieval work.
+2. Launch a subagent for retrieval. Treat an explicit request for `context_gather`, `forgetful:context_gather`, `context-gather`, "gather context", or an implementation brief as permission to delegate this retrieval work.
 3. Instruct the subagent to query Forgetful memory first, across all projects unless Scottesh explicitly asks for a project scope.
 4. Instruct the subagent to follow relevant memory links:
    - Read linked memories when they clarify decisions or evolution.

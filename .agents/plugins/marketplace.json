@@ -1,14 +1,14 @@
 {
-  "name": "context-hub",
+  "name": "forgetful",
   "interface": {
-    "displayName": "Context Hub"
+    "displayName": "Forgetful"
   },
   "plugins": [
     {
-      "name": "context-hub",
+      "name": "forgetful",
       "source": {
         "source": "local",
-        "path": "./plugins/context-hub"
+        "path": "./plugins/forgetful"
       },
       "policy": {
         "installation": "AVAILABLE",
