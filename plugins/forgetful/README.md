@@ -1,6 +1,6 @@
 # Forgetful for Codex
 
-Forgetful packages Scottesh's context-gather workflow for Codex.
+Forgetful packages the user's context-gather workflow for Codex.
 
 The plugin focuses on six Codex skills:
 

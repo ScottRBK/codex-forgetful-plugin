@@ -13,7 +13,7 @@ Return only a synthesized implementation brief. Do not edit files.
 
 ### 1. Forgetful Memory
 
-Search across all projects first unless Scottesh explicitly scopes the task.
+Search across all projects first unless the user explicitly scopes the task.
 
 Use the Forgetful meta-tools pattern:
 

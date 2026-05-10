@@ -22,7 +22,7 @@ Forgetful memory curation: No durable memory to save.
 Create or update memories for:
 
 - Important decisions with rationale.
-- Technical patterns Scottesh wants reused.
+- Technical patterns the user wants reused.
 - Project-specific gotchas, conventions, or architecture that will matter later.
 - Strong user preferences or workflows.
 - Durable plugin behavior or setup decisions.

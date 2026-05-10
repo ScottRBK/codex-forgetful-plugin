@@ -1,6 +1,6 @@
 ---
 name: forgetful-project-load
-description: Load recent Forgetful context for an already registered project by matching the current working directory to a Forgetful project and retrieving recent project-scoped memories. Use when Scottesh asks to load, refresh, resume, or catch up on recent Forgetful project information.
+description: Load recent Forgetful context for an already registered project by matching the current working directory to a Forgetful project and retrieving recent project-scoped memories. Use when the user asks to load, refresh, resume, or catch up on recent Forgetful project information.
 ---
 
 # Forgetful Project Load

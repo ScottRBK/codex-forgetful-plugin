@@ -1,13 +1,13 @@
 ---
 name: encode-repo
-description: Bootstrap a repository into Forgetful by creating or updating the project, memories, entities, relationships, documents, and code artifacts. Use when Scottesh asks to encode a repo, bootstrap a codebase into memory, port the Claude /encode-repo workflow, or prepare a project for future agent context retrieval.
+description: Bootstrap a repository into Forgetful by creating or updating the project, memories, entities, relationships, documents, and code artifacts. Use when the user asks to encode a repo, bootstrap a codebase into memory, port the Claude /encode-repo workflow, or prepare a project for future agent context retrieval.
 ---
 
 # Encode Repo
 
 Use this skill to systematically populate Forgetful with durable repository knowledge.
 
-This is the Codex skill form of Scottesh's Claude Code `/encode-repo` command. It uses local code inspection plus Forgetful MCP meta-tools. It does not require Serena; if symbol-level LSP analysis is explicitly requested, gather context first and confirm the available tooling before extending this workflow.
+This is the Codex skill form of the user's Claude Code `/encode-repo` command. It uses local code inspection plus Forgetful MCP meta-tools. It does not require Serena; if symbol-level LSP analysis is explicitly requested, gather context first and confirm the available tooling before extending this workflow.
 
 ## Inputs
 

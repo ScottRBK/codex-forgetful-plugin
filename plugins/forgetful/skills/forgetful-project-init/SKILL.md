@@ -1,6 +1,6 @@
 ---
 name: forgetful-project-init
-description: Create or initialize Forgetful project records for the current repository by matching the current working directory to an existing Forgetful project, asking before creating a missing project, and maintaining generic device/location metadata. Use when Scottesh asks to initialize, create, register, or set up Forgetful project context.
+description: Create or initialize Forgetful project records for the current repository by matching the current working directory to an existing Forgetful project, asking before creating a missing project, and maintaining generic device/location metadata. Use when the user asks to initialize, create, register, or set up Forgetful project context.
 ---
 
 # Forgetful Project Init

@@ -1,6 +1,6 @@
 ---
 name: context-gather
-description: Gather implementation context before planning or coding by delegating retrieval to subagents that combine Forgetful memory, local code inspection, Context7 documentation, and web search when needed. Use when Scottesh asks to gather context, run context_gather, prepare an implementation brief, or check prior decisions and framework guidance before making changes.
+description: Gather implementation context before planning or coding by delegating retrieval to subagents that combine Forgetful memory, local code inspection, Context7 documentation, and web search when needed. Use when the user asks to gather context, run context_gather, prepare an implementation brief, or check prior decisions and framework guidance before making changes.
 ---
 
 # Context Gather
@@ -13,7 +13,7 @@ The point of this workflow is context isolation: retrieval is noisy, tool-heavy 
 
 1. Restate the task in one sentence.
 2. Launch a subagent for retrieval. Treat an explicit request for `context_gather`, `forgetful:context_gather`, `context-gather`, "gather context", or an implementation brief as permission to delegate this retrieval work.
-3. Instruct the subagent to query Forgetful memory first, across all projects unless Scottesh explicitly asks for a project scope.
+3. Instruct the subagent to query Forgetful memory first, across all projects unless the user explicitly asks for a project scope.
 4. Instruct the subagent to follow relevant memory links:
    - Read linked memories when they clarify decisions or evolution.
    - Fetch linked code artifacts and documents when they may contain reusable implementation details.
@@ -22,7 +22,7 @@ The point of this workflow is context isolation: retrieval is noisy, tool-heavy 
 7. Have the subagent query Context7 for framework or library guidance when the task names a library, framework, or API.
 8. Have the subagent use web search only when memory, local files, and Context7 do not provide enough current or authoritative context.
 9. Wait for the subagent's brief before planning or implementing.
-10. Return the synthesized brief, then wait for Scottesh or continue only if the original request also asked for implementation.
+10. Return the synthesized brief, then wait for the user or continue only if the original request also asked for implementation.
 
 ## Subagent Contract
 
@@ -125,4 +125,4 @@ Keep the brief focused. Include code snippets only when they are directly reusab
 - Listing memory IDs without reading relevant linked artifacts.
 - Treating memories as newer than code without checking.
 - Searching the web before checking Forgetful, local files, and Context7.
-- Creating memories during the gather pass unless Scottesh explicitly asks or the session produces a reusable new decision.
+- Creating memories during the gather pass unless the user explicitly asks or the session produces a reusable new decision.
