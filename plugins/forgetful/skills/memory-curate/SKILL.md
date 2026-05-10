@@ -1,6 +1,6 @@
 ---
 name: memory-curate
-description: Curate durable knowledge from the completed Codex turn into Forgetful memory. Use when asked to save or curate memory, when a Forgetful Stop hook requests curation, or when the conversation produced reusable decisions, preferences, project knowledge, or technical patterns worth preserving.
+description: Curate durable knowledge from the completed Codex turn into Forgetful memory. Use when asked to save or curate memory, or when the conversation produced reusable decisions, preferences, project knowledge, or technical patterns worth preserving.
 ---
 
 # Memory Curate
@@ -11,7 +11,7 @@ This skill is deliberately stricter than ordinary note-taking. Most turns should
 
 ## Trigger
 
-When invoked by the Stop hook, inspect the completed turn and decide whether there is reusable knowledge. If nothing qualifies, reply exactly:
+When asked to curate memory, inspect the completed turn and decide whether there is reusable knowledge. If nothing qualifies, reply exactly:
 
 ```text
 Forgetful memory curation: No durable memory to save.

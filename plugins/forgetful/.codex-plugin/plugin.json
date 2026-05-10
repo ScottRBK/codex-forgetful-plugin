@@ -15,21 +15,20 @@
     "coding-workflow"
   ],
   "skills": "./skills/",
-  "hooks": "./hooks.json",
   "interface": {
     "displayName": "Forgetful",
     "shortDescription": "Prepare implementation briefs and curate durable memory with Forgetful",
-    "longDescription": "Use Forgetful to isolate noisy retrieval work in subagents, search Forgetful memory across projects, inspect local code patterns, query Context7 for framework guidance, return concise implementation briefs before planning or editing, and optionally run Stop-hook memory curation for durable knowledge.",
+    "longDescription": "Use Forgetful to isolate noisy retrieval work in subagents, search Forgetful memory across projects, inspect local code patterns, query Context7 for framework guidance, return concise implementation briefs before planning or editing, and manually curate durable knowledge when useful.",
     "developerName": "Scott Raisbeck",
     "category": "Coding",
     "capabilities": [
       "Interactive",
-      "Read",
-      "Hooks"
+      "Read"
     ],
     "defaultPrompt": [
       "Gather context before implementing this change",
       "Prepare an implementation brief for this task",
+      "Initialize Forgetful project context for this session",
       "Use forgetful-install to configure Forgetful for Codex"
     ],
     "brandColor": "#2563EB",
